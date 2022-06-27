@@ -14,10 +14,18 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PokedexPageComponent } from './pages/pokedex-page/pokedex-page.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
+import { CreatePokemonComponent } from './pages/create-pokemon/create-pokemon.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokedexPageComponent,
+    PokemonListComponent,
+    PokemonDetailComponent,
+    CreatePokemonComponent
   ],
   imports: [
     BrowserModule,

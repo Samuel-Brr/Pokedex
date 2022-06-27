@@ -1,14 +1,10 @@
 export class Pokemon{
 
-  static pokemonArray: Pokemon[]
-
   constructor(
     private _name: string,
     private _imageUrl: string,
     private _description: string
-  ){
-    Pokemon.pokemonArray.push(this)
-  }
+  ){}
 
   public get description(): string {
     return this._description

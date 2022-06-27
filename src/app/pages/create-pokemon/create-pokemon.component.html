@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="createPokemonForm" #myForm="ngForm" class="mat-elevation-z4">
+
+  <h2>Ajouter un pokemon</h2>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+    <mat-error *ngIf="getName.invalid">The name field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Image</mat-label>
+    <input matInput formControlName="imageUrl">
+    <mat-error *ngIf="getImageUrl.invalid">The race field is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="description" type="text">
+    <mat-error *ngIf="getDescription.invalid">The birthdate field is required</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="myForm.invalid">Ajouter un pokemon</button>
+
+
+</form>
+
+
