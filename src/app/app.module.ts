@@ -19,6 +19,8 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { CreatePokemonComponent } from './pages/create-pokemon/create-pokemon.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,8 @@ import { CreatePokemonComponent } from './pages/create-pokemon/create-pokemon.co
 
     FormsModule,
     ReactiveFormsModule,
+
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

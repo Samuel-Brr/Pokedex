@@ -1,27 +1,33 @@
-export class Pokemon{
+import { Ability } from "./ability.model";
+import { Attack } from "./attack.model";
+import { Resistance } from "./resistance.model";
+import { Weakness } from "./weakness.model";
+
+export class Pokemon {
 
   constructor(
-    private _name: string,
-    private _imageUrl: string,
-    private _description: string
+      public id: string,
+       public name: string,
+       public nationalPokedexNumber: number,
+       public imageUrl: string,
+       public imageUrlHiRes: string,
+       public types: string[],
+       public supertype: string,
+       public subtype: string,
+       public evolvesFrom: string,
+       public hp: string,
+       public number: string,
+       public artist: string,
+       public rarity: string,
+       public series: string,
+       public set: string,
+       public setCode: string,
+       public attacks: Attack[],
+       public weaknesses: Weakness[],
+       public retreatCost: string[],
+       public convertedRetreatCost: number,
+       public resistances: Resistance[],
+       public text: string[],
+       public ability: Ability,
   ){}
-
-  public get description(): string {
-    return this._description
-  }
-  public set description(value: string) {
-    this._description = value
-  }
-  public get imageUrl(): string {
-    return this._imageUrl
-  }
-  public set imageUrl(value: string) {
-    this._imageUrl = value
-  }
-  public get name(): string {
-    return this._name
-  }
-  public set name(value: string) {
-    this._name = value
-  }
 }

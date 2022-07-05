@@ -23,7 +23,7 @@ export class CreatePokemonComponent implements OnInit {
 
   onSubmit(){
     const newPokemon = this.createPokemon()
-    this.pokedexService.addPokemon(newPokemon)
+    // this.pokedexService.addPokemon(newPokemon)
   }
 
   createPokemon(){
@@ -31,9 +31,9 @@ export class CreatePokemonComponent implements OnInit {
     const imageUrl = this.getImageUrl.value!
     const description = this.getDescription.value!
 
-    const newPokemon = new Pokemon(name, imageUrl, description)
+    // const newPokemon = new Pokemon(name, imageUrl, description)
 
-    return newPokemon
+    // return newPokemon
   }
 
   get getName(){

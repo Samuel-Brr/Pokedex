@@ -1,18 +1,25 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map, Observable, tap } from 'rxjs';
 import { Pokemon } from './pokemon.model';
-import { dataset } from './pokemons-mock';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokedexService {
 
-  dataset: Pokemon[] = dataset
+  dataset: Pokemon[] = []
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.getPokemonsFromApi()
+   }
 
   get getPokemonArray(){
     return this.dataset
+  }
+
+  getPokemonsFromApi(): Observable<Pokemon[]>{
+    return this.http.get('assets/pokemonApi.json').pipe(map((payload:any)=>{return payload = payload.cards}))
   }
 
   addPokemon(pokemon: Pokemon){
